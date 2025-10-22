@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
@@ -17,27 +18,51 @@ function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 items-center">
           <li>
-            <Link to="/" className="text-gray-700 hover:text-green-600">
+            <ScrollLink
+              to="home"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-gray-700 hover:text-green-600"
+            >
               Home
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link to="/#menu" className="text-gray-700 hover:text-green-600">
+            <ScrollLink
+              to="menu"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-gray-700 hover:text-green-600"
+            >
               Menu
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link to="/#about" className="text-gray-700 hover:text-green-600">
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-gray-700 hover:text-green-600"
+            >
               About
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link to="/#contact" className="text-gray-700 hover:text-green-600">
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="cursor-pointer text-gray-700 hover:text-green-600"
+            >
               Contact
-            </Link>
+            </ScrollLink>
           </li>
 
-          {/* Cart Icon */}
+          {/* Cart */}
           <li>
             <Link
               to="/cart"
@@ -65,42 +90,20 @@ function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden bg-white px-4 pb-4 space-y-2">
-          <li>
-            <Link
-              to="/"
-              onClick={() => setIsOpen(false)}
-              className="block py-2 text-gray-700 hover:text-green-600"
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/#menu"
-              onClick={() => setIsOpen(false)}
-              className="block py-2 text-gray-700 hover:text-green-600"
-            >
-              Menu
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/#about"
-              onClick={() => setIsOpen(false)}
-              className="block py-2 text-gray-700 hover:text-green-600"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/#contact"
-              onClick={() => setIsOpen(false)}
-              className="block py-2 text-gray-700 hover:text-green-600"
-            >
-              Contact
-            </Link>
-          </li>
+          {['home', 'menu', 'about', 'contact'].map((section) => (
+            <li key={section}>
+              <ScrollLink
+                to={section}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                onClick={() => setIsOpen(false)}
+                className="block py-2 text-gray-700 hover:text-green-600 cursor-pointer"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </ScrollLink>
+            </li>
+          ))}
           <li>
             <Link
               to="/cart"
