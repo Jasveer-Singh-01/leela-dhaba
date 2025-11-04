@@ -13,6 +13,11 @@ import paneerSlaw from '../assets/images/menu/fast_food/paneer-slaw.jpg';
 import periPeriFries from '../assets/images/menu/fast_food/peri-peri-fries.jpg';
 import doubleAalooTikki from '../assets/images/menu/fast_food/tii.jpeg';
 
+import cheesePizza from '../assets/images/menu/pizza/cheese-pizza.jpg';
+import onionTomatoCapcicum from '../assets/images/menu/pizza/onion-tomato-capcicum.png';
+
+
+
 Modal.setAppElement('#root');
 
 /* --------------------------------------------------------------
@@ -33,8 +38,8 @@ const menuItems = {
       { id: 10, name: "Paneer Slaw", description: "Creamy coleslaw with marinated paneer chunks.", price: "₹130", image: paneerSlaw }
     ],
     pizza: [
-      { id: 11, name: "Cheese Pizza", description: "Classic mozzarella cheese pizza with soft crust.", price: "₹120", image: "https://images.unsplash.com/photo-1601924582971-b8d8e07a7a1b" },
-      { id: 12, name: "Onion, Capsicum, Tomato Pizza (6 Inch)", description: "Loaded with fresh onion, tomato and bell peppers.", price: "₹130", image: "https://images.unsplash.com/photo-1601924582971-b8d8e07a7a1b" },
+      { id: 11, name: "Cheese Pizza", description: "Classic mozzarella cheese pizza with soft crust.", price: "₹120", image: cheesePizza },
+      { id: 12, name: "Onion, Capsicum, Tomato Pizza (6 Inch)", description: "Loaded with fresh onion, tomato and bell peppers.", price: "₹130", image: onionTomatoCapcicum },
       { id: 13, name: "Paneer Pizza", description: "Spicy paneer topping with cheese and herbs.", price: "₹150", image: "https://images.unsplash.com/photo-1628840042765-356c8cf9a654" },
       { id: 14, name: "Mushroom Pizza", description: "Cheesy pizza topped with sautéed mushrooms.", price: "₹150", image: "https://images.unsplash.com/photo-1594007654729-407eedc4be5b" },
       { id: 15, name: "Veg Mix Pizza", description: "A mix of vegetables, cheese and oregano on thin crust.", price: "₹160", image: "https://images.unsplash.com/photo-1564936281403-23b8dd93b07f" },
